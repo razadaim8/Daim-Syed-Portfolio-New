@@ -308,8 +308,9 @@ body {
 }
 
 .glow-btn-outline:hover {
-    background: rgba(0, 255, 255, 0.1);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    scale: 1.05;
+    background: oklch(78.558% 0.14794 224.301 / 0.1);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
 .hero-content-right {
@@ -438,7 +439,6 @@ body {
 }
 
 .inner-img-placeholder::after {
-    content: 'Visual Focus';
     position: absolute;
     top: 50%;
     left: 50%;
