@@ -141,11 +141,12 @@ body {
     align-items: center;
     gap: 1rem;
     text-decoration: none;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .nav-logo:hover {
-    transform: scale(1.02);
+    transition: transform 0.5s ease;
+    transform: scale(1.2);
 }
 
 .logo-img-wrapper {
@@ -527,7 +528,8 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.3em;
     font-size: 0.875rem;
-    color: var(--accent-cyan); /* Using cyan for neon effect */
+    color: var(--accent-cyan);
+    /* Using cyan for neon effect */
     font-family: var(--font-body);
 }
 
@@ -581,7 +583,12 @@ body {
     width: 0;
 }
 
-.fill-ui, .fill-graphic, .fill-proto, .fill-brand, .fill-typography, .fill-icons {
+.fill-ui,
+.fill-graphic,
+.fill-proto,
+.fill-brand,
+.fill-typography,
+.fill-icons {
     animation: fillProgress 2s forwards ease-out;
 }
 
@@ -616,12 +623,18 @@ body {
 }
 
 /* --- TOOLS SECTION --- */
-.tools-grid {
+.tools-grid-custom {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.tools-row {
+    display: flex;
     justify-content: center;
     gap: 1.5rem;
-    margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
 .tool-badge {
@@ -635,10 +648,11 @@ body {
 }
 
 .tool-badge:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
+    scale: 1.05;
     border-color: var(--accent-cyan);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-    background: rgba(0, 255, 255, 0.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    background: rgba(0, 255, 255, 0.3);
 }
 
 /* --- SERVICES SECTION --- */
