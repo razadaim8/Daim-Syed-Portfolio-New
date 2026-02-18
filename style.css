@@ -579,32 +579,39 @@ body {
     background: linear-gradient(90deg, var(--accent-violet), var(--accent-cyan));
     border-radius: 10px;
     width: 0;
+}
+
+.fill-ui, .fill-graphic, .fill-proto, .fill-brand, .fill-typography, .fill-icons {
     animation: fillProgress 2s forwards ease-out;
 }
 
 .fill-ui {
-    width: 95%;
-}
-
-.fill-graphic {
     width: 90%;
 }
 
-.fill-brand {
-    width: 85%;
+.fill-graphic {
+    width: 80%;
 }
 
 .fill-proto {
+    width: 75%;
+}
+
+.fill-brand {
+    width: 70%;
+}
+
+.fill-typography {
     width: 80%;
+}
+
+.fill-icons {
+    width: 75%;
 }
 
 @keyframes fillProgress {
     from {
         width: 0;
-    }
-
-    to {
-        width: inherit;
     }
 }
 
