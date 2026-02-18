@@ -75,6 +75,7 @@ body {
     border-radius: 20px;
     padding: 2rem;
     transition: 0.3s ease;
+
 }
 
 .glass-card:hover {
@@ -727,7 +728,20 @@ body {
 .project-img-large {
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #1a0b2e, #000);
+}
+
+.project-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-tags span {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    background: rgba(13, 16, 16, 0.8);
+    border-radius: 50px;
+    color: white;
 }
 
 .project-grid {
@@ -740,6 +754,7 @@ body {
     position: relative;
     overflow: hidden;
     padding: 0;
+    height: 240px; /* Fixed height for consistency */
 }
 
 .project-img-small {
@@ -762,6 +777,21 @@ body {
 
 .glass-card:hover .project-overlay {
     transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* Ensure images fit correctly */
+.project-img-large img, .project-img-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: 0.5s ease;
+}
+
+.glass-card:hover img {
+    scale: 1.01;
     opacity: 1;
 }
 
@@ -824,44 +854,6 @@ body {
     color: var(--accent-cyan);
     font-weight: 700;
     margin-bottom: 0.5rem;
-}
-
-/* --- ROADMAP --- */
-.roadmap {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 4rem;
-    position: relative;
-    padding-top: 2rem;
-}
-
-.roadmap::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--glass-border);
-}
-
-.roadmap-step {
-    flex: 1;
-    position: relative;
-    padding-top: 2rem;
-    text-align: center;
-}
-
-.step-indicator {
-    position: absolute;
-    top: -9px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 16px;
-    height: 16px;
-    background: var(--accent-violet);
-    border-radius: 50%;
-    box-shadow: 0 0 10px var(--accent-violet);
 }
 
 /* --- CONTACT --- */
@@ -954,46 +946,12 @@ footer {
 
 /* --- RESPONSIVE --- */
 @media (max-width: 992px) {
-    .glitch-text {
-        font-size: 4rem;
-    }
-
-    .hero-wrapper {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .hero-content {
-        order: 2;
-    }
-
-    .hero-image-wrapper {
-        order: 1;
-        margin-bottom: 2rem;
-    }
-
-    .hero-btns {
-        justify-content: center;
-    }
-
-    .creative-statement {
-        margin: 0 auto 2.5rem;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
     .projects-layout {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
     .skills-grid {
         grid-template-columns: 1fr;
     }
@@ -1010,21 +968,6 @@ footer {
 
     .timeline-dot {
         left: 12px !important;
-    }
-
-    .roadmap {
-        flex-direction: column;
-        gap: 3rem;
-    }
-
-    .roadmap::before {
-        left: 20px;
-        width: 2px;
-        height: 100%;
-    }
-
-    .step-indicator {
-        left: 20px;
     }
 }
 
