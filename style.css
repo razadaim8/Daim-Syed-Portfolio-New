@@ -309,10 +309,6 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.hero-title .block {
-    display: block;
-}
-
 .hero-subtitle {
     font-size: clamp(1.25rem, 4vw, 1.5rem);
     color: var(--text-dim);
@@ -527,16 +523,34 @@ body {
     font-family: var(--font-heading);
 }
 
-.about-text h3 {
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: var(--accent-cyan);
+.about-label {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.875rem;
+    color: var(--accent-cyan); /* Using cyan for neon effect */
+    font-family: var(--font-body);
 }
 
-.about-text p {
-    margin-bottom: 1rem;
+.about-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--glass-border);
+    text-align: center;
+}
+
+.stat-number {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.stat-label {
+    font-size: 0.875rem;
     color: var(--text-dim);
+    margin-top: 0.25rem;
 }
 
 /* --- SKILLS SECTION --- */
