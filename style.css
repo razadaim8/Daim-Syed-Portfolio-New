@@ -80,6 +80,9 @@ body {
 .glass-card:hover {
     border-color: rgba(255, 255, 255, 0.15);
     background: rgba(255, 255, 255, 0.05);
+    scale: 1.05;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    
 }
 
 .glass-strong {
@@ -146,7 +149,7 @@ body {
 
 .nav-logo:hover {
     transition: transform 0.5s ease;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .logo-img-wrapper {
@@ -235,7 +238,7 @@ body {
 }
 
 .glow-btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
 }
 
