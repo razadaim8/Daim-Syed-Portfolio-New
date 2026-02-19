@@ -883,7 +883,7 @@ body {
 
 /* --- VIDEO SHOWCASE SECTION --- */
 .video-showcase-section {
-    padding: 6rem 0;
+    margin-bottom: 4rem;
 }
 
 .video-grid {
@@ -917,6 +917,7 @@ body {
 .video-card:hover .animation-video {
     opacity: 1;
     scale: 1.05;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
 }
 
 .video-overlay {
