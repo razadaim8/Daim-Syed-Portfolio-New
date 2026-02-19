@@ -849,7 +849,8 @@ body {
 
 .logo-track {
     display: flex;
-    width: calc(250px * 21); /* 14 logos + 7 duplicates */
+    width: calc(250px * 21);
+    /* 14 logos + 7 duplicates */
     animation: scrollLogos 50s linear infinite;
 }
 
@@ -877,8 +878,13 @@ body {
 }
 
 @keyframes scrollLogos {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-250px * 14)); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 14));
+    }
 }
 
 /* --- VIDEO SHOWCASE SECTION --- */
@@ -960,6 +966,7 @@ body {
     .video-grid {
         grid-template-columns: 1fr;
     }
+
     .video-card {
         height: 250px;
     }
@@ -1024,6 +1031,144 @@ body {
     color: var(--accent-cyan);
     font-weight: 700;
     margin-bottom: 0.5rem;
+}
+
+/* --- EDUCATION SECTION (Horizontal Roadmap) --- */
+.education {
+    position: relative;
+    overflow-x: hidden;
+    margin-bottom: 4rem;
+}
+
+.education-header {
+    margin-bottom: 4rem;
+}
+
+.edu-roadmap-container {
+    position: relative;
+    padding: 2rem 0 ;
+    width: 100%;
+}
+
+.edu-main-line {
+    position: absolute;
+    top: 30px;
+    /* Aligned with the dots */
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-violet), var(--accent-cyan), transparent);
+    z-index: 1;
+}
+
+.edu-items-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.edu-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.edu-dot-wrapper {
+    margin-bottom: 2rem;
+    background: var(--bg-deep-violet);
+    /* To break the line behind the dot */
+    padding: 0 10px;
+}
+
+.edu-dot {
+    width: 16px;
+    height: 16px;
+    background: var(--accent-cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--accent-cyan);
+    animation: dot-pulse 2s infinite;
+}
+
+@keyframes dot-pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 15px var(--accent-cyan);
+    }
+
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 25px var(--accent-cyan);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px var(--accent-cyan);
+    }
+}
+
+.edu-card {
+    width: 100%;
+    max-width: 300px;
+    padding: 1.5rem !important;
+    text-align: left;
+    /* Using your existing glass-card hover effects */
+}
+
+.edu-title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.edu-place {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .edu-items-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3rem;
+        padding-left: 20px;
+    }
+
+    .edu-main-line {
+        display: none;
+        /* Hide horizontal line on mobile */
+    }
+
+    .edu-item {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .edu-dot-wrapper {
+        margin-bottom: 0;
+        padding: 5px 0;
+    }
+
+    /* Vertical line for mobile (like your experience section) */
+    .edu-items-wrapper::before {
+        content: '';
+        position: absolute;
+        left: 27px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, var(--accent-violet), var(--accent-cyan));
+        z-index: -1;
+    }
 }
 
 /* --- CONTACT --- */
