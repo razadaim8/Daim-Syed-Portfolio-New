@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@300;500;700&display=swap"
         rel="stylesheet">
@@ -538,7 +539,7 @@
             <div class="container">
                 <div class="section-divider"></div>
                 <div class="text-center" style="margin-bottom: 1rem;">
-                    <p class="about-label" style="margin-bottom: 0.5rem;">Journey</p>
+                    <p class="about-label">Journey</p>
                     <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
                 </div>
 
@@ -666,27 +667,188 @@
 
     </main>
 
+    <!-- UPDATED CONTACT SECTION -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-divider"></div>
-            <h2 class="section-title text-center">Let's Connect</h2>
-            <div class="contact-form-wrapper">
-                <form class="glass-card">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+            <div class="contact-header">
+                <p class="hero-label">Get In Touch</p>
+                <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+            </div>
+
+            <div class="contact-grid-new">
+                <!-- Left Side: Contact Info -->
+                <div class="contact-info-card glass-card">
+                    <h3 class="contact-sub-title">Let's talk <br>About your project</h3>
+                    <p class="contact-desc">Have a project in mind or want to collaborate? Feel free to reach out. I’m
+                        always open to discussing new ideas, creative projects, and opportunities to bring your vision
+                        to life.</p>
+
+                    <div class="contact-methods-list">
+                        <!-- 1. Phone Call -->
+                        <div class="method-item">
+                            <div class="method-icon-box">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="method-details">
+                                <span>Reach Me Directly</span>
+                                <a href="tel:+923155619514">+92 315 5619514</a>
+                            </div>
+                        </div>
+
+                        <!-- 2. WhatsApp -->
+                        <div class="method-item">
+                            <div class="method-icon-box">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="method-details">
+                                <span>Quick Chat on WhatsApp</span>
+                                <a href="https://wa.me/923355619514" target="_blank">+92 335 5619514</a>
+                            </div>
+                        </div>
+
+                        <!-- 3. Email -->
+                        <div class="method-item">
+                            <div class="method-icon-box">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-details">
+                                <span>Email Address</span>
+                                <a href="mailto:razadaim8@gmail.com">razadaim8@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <!-- 4. Address (Google Maps ) -->
+                        <div class="method-item">
+                            <div class="method-icon-box">
+                                <i class="fas fa-location-dot"></i>
+                            </div>
+                            <div class="method-details">
+                                <span>Address</span>
+                                <a href="https://www.google.com/maps/place/Jhangi+Sayedan,+Islamabad,+Pakistan/@33.6184203,72.9198336,14z/data=!3m1!4b1!4m6!3m5!1s0x38df97ab13dbeecb:0x9476d395e1d5577!8m2!3d33.6179257!4d72.9373374!16s%2Fm%2F0hhs829!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D"
+                                    target="_blank">Jhangi Syedan
+                                    Islamabad, Pakistan</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="glow-btn" style="width: 100%; border: none; cursor: pointer;">Send
-                        Message</button>
-                </form>
+                    <!-- Social links removed as requested -->
+                </div>
+
+                <!-- Right Side: Detailed Form -->
+                <div class="contact-form-card glass-card">
+                    <form class="custom-contact-form">
+                        <!-- First Name & Last Name -->
+                        <div class="form-row">
+                            <div class="form-group-new">
+                                <label>First Name</label>
+                                <input type="text" placeholder="First Name" required>
+                            </div>
+                            <div class="form-group-new">
+                                <label>Last Name</label>
+                                <input type="text" placeholder="Last Name" required>
+                            </div>
+                        </div>
+
+                        <!-- Email (Compulsory ) -->
+                        <div class="form-group-new">
+                            <label>Email Address *</label>
+                            <input type="email" placeholder="yourname@example.com" required>
+                        </div>
+
+                        <!-- Phone with Country Code (Optional) -->
+                        <div class="form-row">
+                            <div class="form-group-new" style="flex: 0 0 30%;">
+                                <label>Code</label>
+                                <select class="form-select-custom">
+                                    <option value="+92">+92 (PK)</option>
+                                    <option value="+93">+93 (AF)</option>
+                                    <option value="+355">+355 (AL)</option>
+                                    <option value="+213">+213 (DZ)</option>
+                                    <option value="+61">+61 (AU)</option>
+                                    <option value="+43">+43 (AT)</option>
+                                    <option value="+880">+880 (BD)</option>
+                                    <option value="+973">+973 (BH)</option>
+                                    <option value="+32">+32 (BE)</option>
+                                    <option value="+55">+55 (BR)</option>
+                                    <option value="+1">+1 (CA)</option>
+                                    <option value="+86">+86 (CN)</option>
+                                    <option value="+45">+45 (DK)</option>
+                                    <option value="+20">+20 (EG)</option>
+                                    <option value="+33">+33 (FR)</option>
+                                    <option value="+49">+49 (DE)</option>
+                                    <option value="+30">+30 (GR)</option>
+                                    <option value="+852">+852 (HK)</option>
+                                    <option value="+91">+91 (IN)</option>
+                                    <option value="+62">+62 (ID)</option>
+                                    <option value="+98">+98 (IR)</option>
+                                    <option value="+964">+964 (IQ)</option>
+                                    <option value="+353">+353 (IE)</option>
+                                    <option value="+972">+972 (IL)</option>
+                                    <option value="+39">+39 (IT)</option>
+                                    <option value="+81">+81 (JP)</option>
+                                    <option value="+962">+962 (JO)</option>
+                                    <option value="+965">+965 (KW)</option>
+                                    <option value="+60">+60 (MY)</option>
+                                    <option value="+52">+52 (MX)</option>
+                                    <option value="+31">+31 (NL)</option>
+                                    <option value="+64">+64 (NZ)</option>
+                                    <option value="+47">+47 (NO)</option>
+                                    <option value="+92">+92 (PK)</option>
+                                    <option value="+63">+63 (PH)</option>
+                                    <option value="+48">+48 (PL)</option>
+                                    <option value="+974">+974 (QA)</option>
+                                    <option value="+7">+7 (RU)</option>
+                                    <option value="+966">+966 (SA)</option>
+                                    <option value="+65">+65 (SG)</option>
+                                    <option value="+27">+27 (ZA)</option>
+                                    <option value="+82">+82 (KR)</option>
+                                    <option value="+34">+34 (ES)</option>
+                                    <option value="+94">+94 (LK)</option>
+                                    <option value="+46">+46 (SE)</option>
+                                    <option value="+41">+41 (CH)</option>
+                                    <option value="+66">+66 (TH)</option>
+                                    <option value="+90">+90 (TR)</option>
+                                    <option value="+971">+971 (AE)</option>
+                                    <option value="+44">+44 (UK)</option>
+                                    <option value="+1">+1 (US)</option>
+                                    <option value="+84">+84 (VN)</option>
+                                    <!-- Add more codes as needed -->
+                                </select>
+                            </div>
+                            <div class="form-group-new" style="flex: 1;">
+                                <label>Phone Number (Optional)</label>
+                                <input type="tel" placeholder="300 1234567">
+                            </div>
+                        </div>
+
+                        <!-- Services Dropdown -->
+                        <div class="form-group-new">
+                            <label>Service You Want</label>
+                            <select class="form-select-custom" required>
+                                <option value="" disabled selected>Select a Service</option>
+                                <option value="ui-ux">UI/UX Design</option>
+                                <option value="graphic">Graphic Design</option>
+                                <option value="branding">Branding & Identity</option>
+                                <option value="web">Logo Design</option>
+                                <option value="app">Prototyping & Wireframing</option>
+                                <option value="social">Social Media Design</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Message Box -->
+                        <div class="form-group-new">
+                            <label>Drop a Message</label>
+                            <textarea placeholder="Write your message here..." rows="4" required></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="glow-btn submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
